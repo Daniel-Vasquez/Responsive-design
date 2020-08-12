@@ -1,0 +1,567 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b2127;
+  color: white;
+  height: 70px;
+}
+
+.header a { /* Dentro de header, ponle a las "a" esta condicion, sin la comas es dentro de, con la coma es a todos los que se vayan nombrando */
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none; /*SIN decoracion*/
+  height: inherit;
+  padding: 0 10px; 
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  background-color: #1b2127;
+  /* background-image: url('./imagenes/hero.jpg');
+  background-size: 500px 300px;
+  background-repeat: no-repeat;
+  background-position-x: right;*/
+  justify-content: space-between;
+}
+
+/* .hero-image {
+  object-fit: cover;
+} */
+
+figure.logo img{
+  width: 125px;
+  object-fit: cover;
+  height: 50px;
+}
+
+h1{
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+  color: white;
+  margin: 0;
+}
+
+h1 strong{
+  color: #026fff;
+}
+
+h2 {
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
+  margin: 5px 0;
+}
+
+.portfolio{
+  background: #cdcdcd; /*Aqui va --> #fafafa*/
+  padding: 20px;
+}
+
+h1,
+h2,   /* Sin la coma, estariamos haciendo un selector descendente, estaria buscando dentro*/
+h3,     /*de h1 a h2 y h2 a h3 y asi hasta llegar a h6 y a ese se le asigna la propiedad */  
+h4,       /*En este caso a todos les asigna la declaracion*/
+h5,
+h6{
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal; /*normal equivale a 400*/
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid gray; 
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 20px; /*Margen hacia adentro*/
+  background: white; 
+}
+
+.project-course, 
+.project-date, 
+.project-url {
+  margin: 10px 0;
+}
+
+.project-description {
+  font-size: 20px;
+}
+
+.project strong {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+/* .project-date {  Puede que la usemos en otro momento
+  margin: 10px 0;
+} */
+
+.project-title {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-details {
+  /* border: 1px solid red; */
+  border-left-color: #026fff;
+  border-left-style: solid;
+  border-left-width: 5px;
+  
+  border-top-color: #026fff;
+  border-top-style: solid;
+  border-top-width: 5px;
+
+  /* border-bottom-color: #026fff;
+  border-bottom-style: dashed;
+  border-bottom-width: 5px; */
+
+  padding: 5px;
+  width: 50%;
+  height: 374px;
+  height: 368px;
+
+
+}
+
+.project-imageContainer {
+  /* border: 1px solid red; */
+
+  border-right-color: #026fff;
+  border-right-style: solid;
+  border-right-width: 5px;
+  
+  border-bottom-color: #026fff;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+
+  /* border-top-color: #026fff;
+  border-top-style: dashed;
+  border-top-width: 5px; */
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 368px;
+}
+
+/* .project-image {
+  width: 250px;
+  height: 270px;
+  border: 1px solid green;
+} */
+
+.project-imageContainer img {
+  max-width: 80%;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+.header ol {
+  display: flex;
+  height: inherit;
+}
+
+/* Después vamos a ir heredando la altura del header por medio de la 
+propiedad height con valor inherit de forma descendente, pasando por 
+cada elemento hijo hasta llega al selector del anchor <a>. 
+Son 4:
+*/
+
+/* 1 */
+.menu { /* .menu hereda de .header */
+  height: inherit;
+}
+
+/* 2 */
+/* .header ol { .header ol hereda de .menu ---------------->Ya declaramos (.header ol)
+  display: flex;
+  height: inherit;
+} */
+
+/* 3 */
+.header ol li { /* .header ol li hereda de .header ol */
+  height: inherit;
+}
+
+/* 4 */
+/* .header a { .header a hereda de .header ol li ----------->Ya declaramos (.header a)
+  color: white;
+  text-decoration: none;
+  height: inherit;
+} */
+
+
+.footer {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; /*Como no se alinea correctamente le pondremos otra condicion a parte */
+  background-color: #1b2127;
+  color: white;
+}
+
+.footer img {
+  vertical-align: middle; /*Condicion a parte*/
+}
+
+.footer a {
+  color: white;
+}
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+
+.event-list
+.container {
+  /* border: 1px solid red; */
+  border-left-style: solid;
+  border-left-width: 10px;
+  border-left-color: #026fff;
+}
+
+.event-list-title {
+  margin-left: 20px; 
+}
+
+.event {
+  margin: 10px;
+  width: 480px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  /* background: #cdcdcd; Aqui va #f4fbff */
+  /* border: 1px solid red; */
+}
+
+.event img {
+  width: 480px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-detail {
+  margin: 20px 40px;
+  margin-top: -40px; /*Hacemos el contenido hacia arriba*/
+  position: relative;
+  padding: 20px;
+  background-color: white;
+  text-align: center; /*Centrar texto, tambie esta justify-content, pero ese NO hay que usarlo.*/
+}
+
+.event-description {
+  text-align: left;
+}
+
+.event-url {
+  color: white; /*Por defecto el borde tendra el mismo color*/
+  border: 1px solid; /*Por defecto el borde asimila el color del borde del color del texto*/ 
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  background: #ff0080;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  background-color: #056fff;
+  color: white;
+}
+
+/* .social {
+  border: 1px solid red;
+} */
+
+.social-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  margin: 0 10px;
+  /* border: 1px solid white; */
+}
+
+.social-link.twitter {
+  background-image: url('./imagenes/twitter.svg');
+}
+
+.social-link.facebook {
+  background-image: url('./imagenes/facebook.svg');
+}
+
+.social-link.github {
+  background-image: url('./imagenes/github.svg');
+}
+
+.social-link.instagram {
+  background-image: url('./imagenes/instagram.svg');
+}
+
+.form-email input {
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 25px;
+  background-image: url('./imagenes/envelope.svg');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center; 
+  background-position-x: 5px; 
+}
+
+.form-email button {
+  display: block; /*Para que es ponga en la parte de abajo del formulario*/
+  background: transparent;
+  color: white;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+  border-color: white;
+}
+
+.form-email h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  /* border: 1px solid red; */
+  max-width: 1000px;
+  flex: 1;
+  margin: 0 auto;
+
+  /*Tambien funciona si se las ponemos manualmente y las 
+  podemos borrar del header*/
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+
+h1 {
+  text-shadow: 0px 10px 10px cyan;
+}
+
+.container_iframe {
+  display: block;
+  text-align: center;
+  height: 330px;
+  padding: 15px 0;
+}
+
+.container_iframe iframe {
+  width: 70%;
+  height: 100%;
+}
+
+/*------------------------ Desktop First que empieces desde el Media Queties mas grande ------------------------*/
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 0.4em; /*En el curso es; 0 1em, pero un icono de contact (class = "social") cae y se ve feo*/
+  }
+
+  /* .container_iframe {
+    display: block;
+    text-align: center;
+  }
+
+  .container_iframe iframe {
+    max-width: 50%;
+    height: 300px;
+  } */
+
+}
+
+@media screen and (max-width: 767px) { /*767 porque en 768 todavia se alcanza ver bien el websit*/ 
+  .header {
+    display: block;
+    height: auto;
+  } 
+
+  .header .logo {
+    text-align: center;
+  }
+  
+  .header ol {
+    display: block; /*Ó display: initial;*/
+  }
+
+  .header ol li {
+    height: 50px;
+  }
+
+  .header a {
+    justify-content: center;
+  }
+
+  .project {
+    display: block;
+  }
+
+  .project-imageContainer {
+    width: auto;
+    text-align: center;
+    border-top-style: none;
+  }
+
+  .project-details {
+    width: auto;
+    height: auto;
+    border-bottom-style: none;
+    /* font-size: 16px; */
+  }
+
+  .project-course, .project-date, .project-url {
+    margin: 0.3em 0;
+  }
+
+  .project-title {
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+  }
+
+  .project-url {
+    font-size: 1em;
+  }
+
+  .project-course {
+    font-size: 0.8em;
+  }
+
+  .project-date {
+    font-size: 1em;
+  }
+
+  .project-description {
+    font-size: 0.8em;
+  } 
+
+  .event {
+    width: auto;
+    flex-shrink: initial; /*Lo reseteamos ya que era 0 en el CSS normal*/
+  }
+
+  .event img {
+    width: 100%;
+    object-position: 0% 30%; /*Lo puse de los comentarios, No del curso, ajusta la imagen de Eventos, para que se vea más el rostro */
+  }
+
+  figure.logo img {
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+  }
+
+  .hero {
+    display: block;
+    text-align: center;
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+    padding: 10px 0;
+  }
+
+  img.hero-image {
+    max-width: 100%;
+  }
+
+  .project-imageContainer img {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-details {
+    font-size: 12px;
+  }
+
+  .event-detail {
+    /* 1em = 16px */
+    margin: -2em 0.5em 0.5em;
+    padding: 1em;
+  }
+
+  .contact {
+    height: auto;
+    padding: 1em 0.5em;
+    text-align: center;
+    display: block;
+  }
+
+  .form-email button {
+    margin: 1em auto;
+  }
+
+  .form-email h3 {
+    margin-top: 0;
+  }
+
+  .footer {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+
+  img.hero-image {
+    height: 50%;
+  }
+
+  .project-imageContainer {
+    height: auto;
+  }
+
+  .project-imageContainer img {
+    max-width: 50%;
+    padding: 10px 0;
+  }
+
+  .container_iframe {
+    height: 225px;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  .hero h1 {
+    font-size: 1em;
+  }
+
+  .container_iframe {
+    height: auto;
+  }
+
+}
