@@ -21,26 +21,31 @@
 </head>
 
 <body>
-  <header class="header"><!------------------------------------Cabecera del sitio web-->
-    <div class="container">  
+  <header class="header">
+
+    <div class="hamburger">
+      <div class="_layer -top"></div>
+      <div class="_layer -mid"></div>
+      <div class="_layer -bottom"></div>
+    </div>
+ 
       <figure class="logo">
         <img src="./imagenes/dan_logo.png" alt="Logo de www.leonidasesteban.com" />
       </figure>
-      <nav class="menu"><!-----------------------------------Menu de navegacion-->
-        <ol><!----------------------------------listas-->
-          <li><!--------------------------------items de la lista-->
-            <a class="link" href="#portafolio">Portafolio</a><!-----------------anchor (ancla)-->
-            <!-- href="#" Hacemos que se comporte como un enlace -->
-          </li>
-          <li>
-            <a class="link" href="#eventos">Experiencia</a>
-          </li>
-          <li>
-            <a class="link" href="#contacto">Trabajemos juntos</a>
-          </li>
-        </ol>
-      </nav>
-    </div>
+      <nav class="menuppal">
+          <ul>
+            <li><!--------------------------------items de la lista-->
+              <a class="link" href="#portafolio">Portafolio</a><!-----------------anchor (ancla)-->
+              <!-- href="#" Hacemos que se comporte como un enlace -->
+            </li>
+            <li>
+              <a class="link" href="#eventos">Experiencia</a>
+            </li>
+            <li>
+              <a class="link" href="#contacto">Trabajemos juntos</a>
+            </li>
+          </ul>
+        </nav> 
 
   </header>
   
@@ -207,6 +212,22 @@
       </div>
     </div>
   </footer><!---------------------ES COMO HEADER, PERO DE HASTA ABAJO-->
+
+  <script>
+    // selector
+    var menu = document.querySelector('.hamburger');
+
+    // method
+    function toggleMenu (event) {
+      this.classList.toggle('is-active');
+      document.querySelector( ".menuppal" ).classList.toggle("is_active");
+      event.preventDefault();
+    }
+
+    // event
+    menu.addEventListener('click', toggleMenu, false);
+
+  </script>
 </body>
 
 </html>
