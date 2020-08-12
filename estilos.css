@@ -596,7 +596,7 @@ h1 {
 }
 
 ._layer{
-	background:#fff;
+	background:rgba(50,41,115,1);
 	margin-bottom:4px;
 	border-radius:2px;
 	width:28px;
