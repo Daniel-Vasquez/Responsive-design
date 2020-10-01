@@ -571,6 +571,10 @@ h1 {
     height: 225px;
   }
 
+  .event img {
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 320px) {
