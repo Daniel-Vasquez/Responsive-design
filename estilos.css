@@ -272,7 +272,7 @@ Son 4:
   margin-top: -40px; /*Hacemos el contenido hacia arriba*/
   position: relative;
   padding: 20px;
-  background-color: white;
+  background-color: #f8f9fa;
   text-align: center; /*Centrar texto, tambie esta justify-content, pero ese NO hay que usarlo.*/
 }
 
@@ -501,6 +501,24 @@ h1 {
 
   .project-imageContainer img {
     max-width: 60%;
+  }
+
+  .container_iframe iframe {
+    width: 90%;
+  }
+
+  .event-list {
+    text-align: center;
+  }
+
+  .event img {
+    width: 85%;
+    border-radius: 10px;
+  }
+
+  .event-detail {
+    margin: 5px 80px;
+    margin-top: -30px;
   }
 }
 
